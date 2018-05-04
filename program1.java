@@ -2,7 +2,7 @@
 class program1
 {
 
-  public void prime(int sum)
+  public void prime(int sum,int element1,int element2)
   {
      int is_prime=0,flag=0,cal=0,no=sum;
        for(int p=2;p<=sum/2;p++)
@@ -20,11 +20,13 @@ class program1
             cal=cal+no%10;
             no=no/10;
            }
-           if(cal%2==0)
+           // System.out.println("cal"+cal );
+           if(cal%2!=0)
            {
-            System.out.println("addition is odd and no inns prime"+sum );
+            System.out.println("addition of "+element1+ " "+element2+" odd and no inns prime"+sum );
            }
        }
+
 
   }
 
@@ -54,7 +56,7 @@ class program1
 {
       sum=a[i][j]+a[j][i];
      // System.out.println("output is"+sum);
-pr.prime(sum);
+pr.prime(sum,a[i][j],a[j][i]);
 //prime
 
     }
